@@ -1,9 +1,4 @@
-import {
-  Route,
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import { Layout } from "./layout";
 import { Path } from "./path";
@@ -11,6 +6,7 @@ import { Home } from "../../pages/home/home";
 import { Friends } from "../../pages/friends/friends";
 import { Messages } from "../../pages/messages/messages";
 import { Clubs } from "../../pages/clubs/clubs";
+import { RegisterForm } from "../../features/registerForm/RegisterForm";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +19,7 @@ const router = createBrowserRouter([
       { path: Path.clubs, element: <Clubs /> },
     ],
   },
+  { path: Path.register, element: <RegisterForm /> },
 ]);
 
 function App() {
@@ -30,14 +27,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <Routes>
-<Route path={Path.home} element={<Layout />}>
-  <Route index element={<Home />} />
-  <Route path="friends" element={<Friends />} />
-  <Route path="messages" element={<Messages />} />
-  <Route path="clubs" element={<Clubs />} />
-</Route>
-</Routes> */
-}
