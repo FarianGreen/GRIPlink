@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 import { registerValidation, loginValidation } from "./validations/index.js";
 import { checkAuth, handleValidationErrors } from "./utils/index.js";
 import { register, login, getMe } from "./controllers/UserController.js";
@@ -11,18 +12,21 @@ mongoose
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Jiu Link");
 });
 
 app.post("/auth/login", loginValidation, handleValidationErrors, login);
+
 app.post(
   "/auth/register",
   registerValidation,
   handleValidationErrors,
   register
 );
+
 app.get("/auth/me", checkAuth, getMe);
 
 app.listen(5555, (err) => {
