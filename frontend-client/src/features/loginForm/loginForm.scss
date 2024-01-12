@@ -1,4 +1,4 @@
-.register {
+.login {
   width: 100vw;
   position: fixed;
   top: 0;
@@ -8,8 +8,11 @@
   justify-content: center;
   align-items: center;
 }
-
-.register-container__form {
+.login-container__form {
   display: flex;
   flex-direction: column;
+}
+.form-error {
+  color: red;
+  font-size: 10px;
 }
