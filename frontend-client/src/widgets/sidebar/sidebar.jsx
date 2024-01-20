@@ -6,16 +6,16 @@ export const Sidebar = () => {
   return (
     <ul className="navbar">
       <Link className="navbar__item" to={Path.home}>
-        Главная
+        {/* Главная */}
       </Link>
       <Link className="navbar__item" to={Path.friends}>
-        Друзья
+        {/* Друзья */}
       </Link>
       <Link className="navbar__item" to={Path.messages}>
-        Сообщения
+        {/* Сообщения */}
       </Link>
       <Link className="navbar__item" to={Path.clubs}>
-        Клубы
+        {/* Клубы */}
       </Link>
     </ul>
   );
