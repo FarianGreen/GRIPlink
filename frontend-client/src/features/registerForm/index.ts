@@ -1,1 +1,2 @@
-export { RegisterForm } from "./registerForm";
+// export { registerForm } from './registerForm';
+export {} from './registerForm';

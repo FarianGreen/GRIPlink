@@ -1,0 +1,19 @@
+.navbar {
+  height: 80px;
+  background-color: #215656;
+
+  margin-top: auto;
+  padding: 12px 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    width: 57px;
+    height: 55px;
+
+    background-color: #e4e4e4;
+    border-radius: 50%;
+  }
+}
