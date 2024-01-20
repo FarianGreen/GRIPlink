@@ -2,7 +2,7 @@ import { Path } from '../../app/config/path';
 import { Link } from 'react-router-dom';
 
 import './header.scss';
-import './header.js';
+import './header';
 
 export const Header = () => {
   return (
