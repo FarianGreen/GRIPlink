@@ -6,6 +6,7 @@ import { sendLoginData, setActiveModalError } from "./reducer/loginSlice";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
 import { Pupap } from "../../shared/pupap";
+import { TloginType } from "./api/api-constants";
 
 export const LoginForm = () => {
   const {
