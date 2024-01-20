@@ -8,6 +8,7 @@ import { Messages } from '../../pages/messages/messages';
 import { Clubs } from '../../pages/clubs/clubs';
 import { RegisterForm } from '../../features/registerForm/registerForm';
 import { LoginForm } from '../../features/loginForm';
+import { Search } from '../../pages/search/search';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: Path.friends, element: <Friends /> },
       { path: Path.messages, element: <Messages /> },
       { path: Path.clubs, element: <Clubs /> },
+      { path: Path.search, element: <Search /> },
     ],
   },
   { path: Path.register, element: <RegisterForm /> },

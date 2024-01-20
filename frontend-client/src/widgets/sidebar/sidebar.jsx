@@ -17,6 +17,9 @@ export const Sidebar = () => {
       <Link className="navbar__item" to={Path.clubs}>
         {/* Клубы */}
       </Link>
+      <Link className="navbar__item" to={Path.search}>
+        {/* Клубы */}
+      </Link>
     </ul>
   );
 };
