@@ -1,5 +1,12 @@
-import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { TloginType, loginUser } from "../api/api-constants";
+
+interface loginInitialState {
+  isLogined: boolean;
+  error: string;
+  autorizadedUser: string | null;
+  haveError: boolean;
+}
 
 export const sendLoginData = createAsyncThunk(
   "sendLoginData",
@@ -14,17 +21,21 @@ export const sendLoginData = createAsyncThunk(
   }
 );
 
-const initialState = {
+const initialState: loginInitialState = {
   isLogined: Boolean(localStorage.getItem("user")),
   error: "",
   autorizadedUser: localStorage.getItem("user"),
-  data: {},
+  haveError: false,
 };
 
 const loginSlice = createSlice({
   name: "login",
   initialState,
-  reducers: {},
+  reducers: {
+    setActiveModalError: (state, action) => {
+      state.haveError = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(sendLoginData.fulfilled, (state, action) => {
@@ -35,8 +46,9 @@ const loginSlice = createSlice({
       })
       .addCase(sendLoginData.rejected, (state) => {
         state.error = "Неверный логин или пароль";
+        state.haveError = true;
       });
   },
 });
-
+export const { setActiveModalError } = loginSlice.actions;
 export const loginReducer = loginSlice.reducer;

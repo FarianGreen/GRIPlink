@@ -2,10 +2,10 @@ import { Link, Navigate } from "react-router-dom";
 import "./loginForm.scss";
 import { Path } from "../../app/config/path";
 import { useForm } from "react-hook-form";
-import { sendLoginData } from "./reducer/loginSlice";
+import { sendLoginData, setActiveModalError } from "./reducer/loginSlice";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
-import { TloginType } from "./api/api-constants";
+import { Pupap } from "../../shared/pupap";
 
 export const LoginForm = () => {
   const {
@@ -14,18 +14,21 @@ export const LoginForm = () => {
     handleSubmit,
   } = useForm();
   const dispatch = useAppDispatch();
-  const stateMessage = useAppSelector((state) => {
+  const ErorreMessageFromState = useAppSelector((state) => {
     return state.login.error;
   });
+  const haveError = useAppSelector((state) => state.login.haveError);
   const isLogined = useAppSelector((state) => state.login.isLogined);
   const onSubmit = (data: any) => {
-    //!!!!ANY?
+    ///ANY?
     return dispatch(sendLoginData(data));
   };
 
   useEffect(() => {
-    alert(stateMessage);
-  }, [stateMessage]);
+    if (ErorreMessageFromState) {
+      dispatch(setActiveModalError(true));
+    }
+  }, [ErorreMessageFromState]);
 
   if (isLogined) {
     return <Navigate to={Path.home} />;
@@ -47,7 +50,7 @@ export const LoginForm = () => {
             />
           </label>
           <div className="form-error">
-            {errors.email ? "Заполните поле" : null}
+            {errors.email ? "Введите почту" : null}
           </div>
           <label>
             <input
@@ -57,7 +60,7 @@ export const LoginForm = () => {
             />
           </label>
           <div className="form-error">
-            {errors.password ? "Заполните поле" : null}
+            {errors.password ? "Ввeдите пароль" : null}
           </div>
           <button type="submit">Go</button>
         </form>
@@ -67,6 +70,7 @@ export const LoginForm = () => {
           <Link to={Path.register}>зарегистрируйтесь</Link>
         </div>
       </div>
+      <Pupap activeModal={haveError}>{ErorreMessageFromState}</Pupap>
     </div>
   );
 };
