@@ -22,9 +22,9 @@ export const sendLoginData = createAsyncThunk(
 );
 
 const initialState: loginInitialState = {
-  isLogined: Boolean(localStorage.getItem("user")),
+  isLogined: Boolean(localStorage.getItem("userToken")),
   error: "",
-  autorizadedUser: localStorage.getItem("user"),
+  autorizadedUser: localStorage.getItem("userToken"),
   haveError: false,
 };
 
@@ -40,8 +40,8 @@ const loginSlice = createSlice({
     builder
       .addCase(sendLoginData.fulfilled, (state, action) => {
         state.error = "Вход выполнен успешно";
-        const { email } = action.payload;
-        localStorage.setItem("user", JSON.stringify({ email }));
+        const { token } = action.payload;
+        localStorage.setItem("userToken", JSON.stringify({ token }));
         state.isLogined = true;
       })
       .addCase(sendLoginData.rejected, (state) => {

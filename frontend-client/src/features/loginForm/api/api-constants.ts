@@ -4,6 +4,8 @@ import { LoginModel } from "./loginModel";
 export type TloginType = {
   email: string;
   password: string;
+  token: string;
+  FieldValues: string;
 };
 export type TLoginState = {
   error: string;

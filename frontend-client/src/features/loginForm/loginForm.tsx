@@ -1,7 +1,7 @@
 import { Link, Navigate } from "react-router-dom";
 import "./loginForm.scss";
 import { Path } from "../../app/config/path";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { sendLoginData, setActiveModalError } from "./reducer/loginSlice";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
@@ -13,15 +13,14 @@ export const LoginForm = () => {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm();
+  } = useForm<TloginType>();
   const dispatch = useAppDispatch();
   const ErorreMessageFromState = useAppSelector((state) => {
     return state.login.error;
   });
   const haveError = useAppSelector((state) => state.login.haveError);
   const isLogined = useAppSelector((state) => state.login.isLogined);
-  const onSubmit = (data: any) => {
-    ///ANY?
+  const onSubmit: SubmitHandler<TloginType> = (data) => {
     return dispatch(sendLoginData(data));
   };
 

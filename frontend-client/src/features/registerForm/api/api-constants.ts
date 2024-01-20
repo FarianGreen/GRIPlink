@@ -4,6 +4,7 @@ import { RegisterModel } from "./register-model";
 export type TRegisterType = {
   email: string;
   password: string;
+  confirmPassword: string;
   userName: string;
   userSurname: string;
 };

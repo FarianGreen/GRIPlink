@@ -1,18 +1,19 @@
 import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
 import "./registerForm.scss";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { sendRegisterData } from "./reducer/registerSlice";
 import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { Path } from "../../app/config/path";
+import { TRegisterType } from "./api/api-constants";
 
 export const RegisterForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm<TRegisterType>();
   const dispatch = useAppDispatch();
   const stateMessage = useAppSelector((state) => {
     return state.register.error;
   });
-  const onSubmit = (data: any) => {
+  const onSubmit: SubmitHandler<TRegisterType> = (data) => {
     return dispatch(sendRegisterData(data));
   };
 
