@@ -8,4 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &__item {
+    width: 57px;
+    height: 55px;
+
+    background-color: #e4e4e4;
+    border-radius: 50%;
+  }
 }
