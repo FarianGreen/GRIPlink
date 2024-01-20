@@ -1,17 +1,17 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./App.scss";
-import { Layout } from "./layout";
-import { Path } from "./path";
-import { Home } from "../../pages/home/home";
-import { Friends } from "../../pages/friends/friends";
-import { Messages } from "../../pages/messages/messages";
-import { Clubs } from "../../pages/clubs/clubs";
-import { RegisterForm } from "../../features/registerForm";
-import { LoginForm } from "../../features/loginForm";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import './App.scss';
+import { Layout } from './layout';
+import { Path } from './path';
+import { Home } from '../../pages/home/home';
+import { Friends } from '../../pages/friends/friends';
+import { Messages } from '../../pages/messages/messages';
+import { Clubs } from '../../pages/clubs/clubs';
+import { RegisterForm } from '../../features/registerForm/registerForm';
+import { LoginForm } from '../../features/loginForm';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
