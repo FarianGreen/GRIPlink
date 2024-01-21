@@ -18,47 +18,47 @@ export const Header = () => {
             <span></span>
             Профиль
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.friends}>
             <span></span>
             Мессенджер
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.messages}>
             <span></span>
             Друзья
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.clubs}>
             <span></span>
             Сообщество
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.friends}>
             <span></span>
             Расписание
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.clubs}>
             <span></span>
             События
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.friends}>
             <span></span>
             Фото
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.search}>
             <span></span>
             Видео
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.messages}>
             <span></span>
             Музыка
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.search}>
             <span></span>
             Файлы
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.clubs}>
             <span></span>
             Общие настройки
           </Link>
-          <Link className="header__nav-menu-item" to={Path.home}>
+          <Link className="header__nav-menu-item" to={Path.search}>
             <span></span>
             Выйти из профиля
           </Link>
