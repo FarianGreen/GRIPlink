@@ -1,0 +1,46 @@
+.home {
+  & img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -5;
+  }
+  &__content {
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    &-nav {
+      width: 100%;
+      height: 50px;
+      border: 1px solid red;
+
+      border-radius: 15px;
+    }
+    &-user {
+      width: 100%;
+      height: 50px;
+      border: 1px solid silver;
+      border-radius: 15px;
+      background: linear-gradient(324deg, #0b0b0b 32.1%, #55bdbd 158.74%);
+    }
+    &-info {
+      width: 100%;
+      height: 50px;
+      border: 1px solid silver;
+      border-radius: 15px;
+      background: linear-gradient(324deg, #0b0b0b 32.1%, #55bdbd 158.74%);
+    }
+    &-publication {
+      width: 100%;
+      height: 50px;
+      border: 1px solid silver;
+      border-radius: 15px 15px 0px 0px;
+      background: #e2ebeb;
+    }
+  }
+}

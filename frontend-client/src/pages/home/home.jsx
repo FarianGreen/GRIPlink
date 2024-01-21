@@ -4,6 +4,8 @@ import { useAppSelector } from '../../shared/hooks/hooks';
 
 import homeImg from '../../assets/img/home-img/home-img.jpg';
 
+import './home.scss';
+
 export const Home = () => {
   const isLogined = useAppSelector((state) => state.login.isLogined);
   if (!isLogined) {

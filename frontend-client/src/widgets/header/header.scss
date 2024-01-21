@@ -37,11 +37,12 @@
       height: 100vh;
 
       position: absolute;
+      z-index: 4;
 
       gap: 10px;
       display: flex;
       flex-direction: column;
-      background: rgba(13, 17, 17, 0.9);
+      background: rgba(13, 17, 17, 0.8);
 
       animation-name: menu-close;
       animation-duration: 0.6s;
