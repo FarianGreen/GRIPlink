@@ -2,8 +2,6 @@ import { Navigate } from 'react-router-dom';
 import { Path } from '../../app/config/path';
 import { useAppSelector } from '../../shared/hooks/hooks';
 
-import homeImg from '../../assets/img/home-img/home-img.jpg';
-
 import './home.scss';
 
 export const Home = () => {
@@ -13,7 +11,7 @@ export const Home = () => {
   }
   return (
     <section className="home">
-      <img src={homeImg} alt="" />
+      <div className="home__photo"></div>
       <div className="home__content">
         <div className="home__content-nav"></div>
         <div className="home__content-user"></div>
