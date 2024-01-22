@@ -9,6 +9,10 @@
 
     position: absolute;
     z-index: -5;
+
+    @media (min-width: 685px) {
+      // display: none;
+    }
   }
   //   & img {
   //     width: 100%;
@@ -31,27 +35,46 @@
       border: 1px solid red;
 
       border-radius: 15px;
+
+      @media (min-width: 685px) {
+        display: none;
+      }
     }
+
     &-user {
       width: 100%;
       height: 50px;
       border: 1px solid silver;
       border-radius: 15px;
       background: linear-gradient(324deg, #0b0b0b 32.1%, #55bdbd 158.74%);
+
+      @media (min-width: 685px) {
+        display: none;
+      }
     }
+
     &-info {
       width: 100%;
       height: 50px;
       border: 1px solid silver;
       border-radius: 15px;
       background: linear-gradient(324deg, #0b0b0b 32.1%, #55bdbd 158.74%);
+
+      @media (min-width: 685px) {
+        display: none;
+      }
     }
+
     &-publication {
       width: 100%;
       height: 50px;
       border: 1px solid silver;
       border-radius: 15px 15px 0px 0px;
       background: #e2ebeb;
+
+      @media (min-width: 685px) {
+        display: none;
+      }
     }
   }
 }
