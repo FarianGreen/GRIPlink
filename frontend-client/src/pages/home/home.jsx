@@ -1,14 +1,6 @@
-import { Navigate } from 'react-router-dom';
-import { Path } from '../../app/config/path';
-import { useAppSelector } from '../../shared/hooks/hooks';
-
-import './home.scss';
+import "./home.scss";
 
 export const Home = () => {
-  const isLogined = useAppSelector((state) => state.login.isLogined);
-  if (!isLogined) {
-    return <Navigate to={Path.login} />;
-  }
   return (
     <section className="home">
       <div className="home__photo"></div>

@@ -1,9 +1,9 @@
 import { Path } from "../../app/config/path";
 import { Link } from "react-router-dom";
-
 import "./header.scss";
 import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
 import { toggle } from "./reducer/headerSlice";
+import { logOut } from "../../features/loginForm/reducer/loginSlice";
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -69,7 +69,10 @@ export const Header = () => {
             <span></span>
             Общие настройки
           </Link>
-          <div className="header__nav-menu-item">
+          <div
+            className="header__nav-menu-item"
+            onClick={() => dispatch(logOut())}
+          >
             <span></span> Выйти из профиля
           </div>
         </ul>

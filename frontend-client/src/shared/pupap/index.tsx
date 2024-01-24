@@ -25,7 +25,12 @@ export const Pupap = ({ activeModal, children }: Props) => {
       onClick={() => dispatch(setActiveModalError(false))}
     >
       <div onClick={(e) => e.stopPropagation()}>{children}</div>
-      <span className="material-symbols-outlined">close</span>
+      <span
+        className="material-symbols-outlined"
+        onClick={() => dispatch(setActiveModalError(false))}
+      >
+        close
+      </span>
     </div>
   );
 };

@@ -35,6 +35,12 @@ const loginSlice = createSlice({
     setActiveModalError: (state, action) => {
       state.haveError = action.payload;
     },
+    logOut: (state) => {
+      state.isLogined = false;
+      localStorage.removeItem("userToken");
+      state.error = "";
+      state.haveError = false;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -50,5 +56,5 @@ const loginSlice = createSlice({
       });
   },
 });
-export const { setActiveModalError } = loginSlice.actions;
+export const { setActiveModalError, logOut } = loginSlice.actions;
 export const loginReducer = loginSlice.reducer;
