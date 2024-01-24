@@ -1,6 +1,3 @@
-
 export const Clubs = () => {
-  return (
-    <div>I clubs</div>
-  )
-}
+  return <div>I clubs</div>;
+};

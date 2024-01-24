@@ -56,7 +56,10 @@ code {
 #root {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
+  z-index: 1;
   display: flex;
   flex-direction: column;
+
+  background: linear-gradient(#175151, #000);
 }
