@@ -9,7 +9,6 @@ import { Clubs } from '../../pages/clubs/clubs';
 import { RegisterForm } from '../../features/registerForm';
 import { LoginForm } from '../../features/loginForm';
 import { Search } from '../../pages/search/search';
-// import { RegisterForm } from '../../features/registerForm';
 
 const router = createBrowserRouter([
   {
