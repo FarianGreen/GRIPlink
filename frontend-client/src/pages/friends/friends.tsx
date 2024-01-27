@@ -1,3 +1,5 @@
+import './friends.scss';
+
 export const Friends = () => {
-  return <div>I friends</div>;
+  return <div className="friends">I friends</div>;
 };
