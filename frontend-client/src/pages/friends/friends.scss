@@ -1,1 +1,8 @@
+@import '../../assets/styles/main.scss';
 
+.friends {
+  // @include title;
+
+  font-family: $main-font;
+  font-size: $fz;
+}
