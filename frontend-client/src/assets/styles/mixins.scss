@@ -3,3 +3,8 @@
     @content;
   }
 }
+
+@mixin title {
+  font-family: $main-font;
+  font-size: $fz;
+}
