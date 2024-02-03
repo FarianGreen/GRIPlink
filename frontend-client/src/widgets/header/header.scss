@@ -65,10 +65,10 @@
       position: absolute;
       z-index: 4;
 
-      gap: 10px;
+      gap: 25px;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
-      justify-content: space-around;
 
       background: rgba(13, 17, 17, 0.8);
 
@@ -83,10 +83,10 @@
         position: absolute;
         z-index: 4;
 
-        gap: 10px;
+        gap: 25px;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
-        justify-content: space-around;
         background: rgba(13, 17, 17, 0.8);
 
         animation-name: menu-open;
