@@ -20,6 +20,7 @@ const UserSchema = new mongoose.Schema(
       required: true,
     },
     avatarUrl: String,
+    last_seen: Date,
   },
   { timestamps: true }
 );

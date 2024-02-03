@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { registerValidation, loginValidation } from "./validations/index.js";
 import { checkAuth, handleValidationErrors } from "./utils/index.js";
-import { register, login, getMe } from "./controllers/UserController.js";
+import { register, login, getMe,createMessage } from "./controllers/index.js";
+
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/")
@@ -28,6 +29,12 @@ app.post(
 );
 
 app.get("/auth/me", checkAuth, getMe);
+
+// app.get("/messages", MessageController.getAll);
+// app.get("/messages", MessageController.getOne);
+app.post("/messages", createMessage);
+// app.delete("/messages", MessageController.remove);
+// app.patch("/messages", MessageController.update);
 
 app.listen(5555, (err) => {
   if (err) {

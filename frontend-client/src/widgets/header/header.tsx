@@ -1,9 +1,9 @@
-import { Path } from '../../app/config/path';
-import { Link } from 'react-router-dom';
-import './header.scss';
-import { useAppDispatch, useAppSelector } from '../../shared/hooks/hooks';
-import { toggle } from './reducer/headerSlice';
-import { logOut } from '../../features/loginForm/reducer/loginSlice';
+import { Path } from "../../app/config/path";
+import { Link } from "react-router-dom";
+import "./header.scss";
+import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
+import { toggle } from "./reducer/headerSlice";
+import { logOut } from "../../features/loginForm/reducer/loginSlice";
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -13,7 +13,7 @@ export const Header = () => {
       <nav className="header__nav">
         <div
           className={
-            active ? 'header__nav-burger--active' : 'header__nav-burger'
+            active ? "header__nav-burger--active" : "header__nav-burger"
           }
           onClick={() => dispatch(toggle())}
         >
@@ -22,7 +22,7 @@ export const Header = () => {
           <span></span>
         </div>
         <ul
-          className={active ? 'header__nav-menu--active' : 'header__nav-menu'}
+          className={active ? "header__nav-menu--active" : "header__nav-menu"}
           onClick={() => dispatch(toggle())}
         >
           <Link className="header__nav-menu-item" to={Path.home}>

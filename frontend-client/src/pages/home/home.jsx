@@ -1,13 +1,22 @@
-import './home.scss';
+import "./home.scss";
 
-import homeImg from '../../assets/img/home-img/home-img.jpg';
-import mainBackground from '../../assets/img/main-background/background.jpg';
+import homeImg from "../../assets/img/home-img/home-img.jpg";
+import mainBackground from "../../assets/img/main-background/Background.jpg";
+import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
+import { toggleCard } from "./reducer/cardSlice";
 
 export const Home = () => {
+  const dispatch = useAppDispatch();
+  const active = useAppSelector((state) => state.card.toggleCard);
   return (
     <section className="home">
       <div className="home__content">
-        <article className="home__content-card">
+        <article
+          className={
+            active ? "home__content-card" : "home__content-card--active"
+          }
+          onClick={() => dispatch(toggleCard())}
+        >
           <div className="home__content-card-front">
             <img
               src={homeImg}
