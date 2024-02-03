@@ -10,6 +10,19 @@
       height: 100vh;
       transform-style: preserve-3d;
 
+      animation-name: active;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+
+      @keyframes active {
+        from {
+          transform: translateY(180deg);
+        }
+        to {
+          transform: translateY(0deg);
+        }
+      }
+
       &-front {
         backface-visibility: hidden;
 
@@ -41,6 +54,10 @@
             letter-spacing: 1px;
           }
         }
+      }
+
+      &-back {
+        backface-visibility: hidden;
       }
     }
   }
