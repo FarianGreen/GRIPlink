@@ -1,7 +1,8 @@
-// @import '../../assets/styles/variables.scss';
+@import '../../assets/styles/style.scss';
 
 .header {
   background-color: #c7c1c1;
+  font-family: $main-font;
 
   &__nav {
     &-burger {
