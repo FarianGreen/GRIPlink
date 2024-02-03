@@ -1,79 +1,75 @@
 .home {
-  &__photo {
-    background-image: url(../../assets/img/home-img/home-img.jpg);
-    width: 100%;
-    height: 100vh;
+  width: 100%;
 
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    position: absolute;
-    z-index: -5;
-
-    @media (min-width: 685px) {
-      // display: none;
-    }
-  }
-  //   & img {
-  //     width: 100%;
-  //     height: 100vh;
-  //     position: absolute;
-  //     z-index: -5;
-  //   }
   &__content {
-    width: 100%;
-    position: absolute;
-    bottom: 80px;
-
     display: flex;
-    flex-direction: column;
-    gap: 7px;
+    justify-content: center;
 
-    &-nav {
-      width: 100%;
-      height: 50px;
-      border: 1px solid red;
+    &-card {
+      width: 375px;
+      height: 100vh;
+      transform-style: preserve-3d;
 
-      border-radius: 15px;
+      //   animation-name: active;
+      //   animation-duration: 3s;
+      //   animation-iteration-count: infinite;
 
-      @media (min-width: 685px) {
-        display: none;
+      @keyframes active {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(180deg);
+        }
       }
-    }
 
-    &-user {
-      width: 100%;
-      height: 50px;
-      border: 1px solid silver;
-      border-radius: 15px;
-      background: linear-gradient(324deg, #0b0b0b 32.1%, #55bdbd 158.74%);
-
-      @media (min-width: 685px) {
-        display: none;
+      &-front,
+      &-back {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
-    }
 
-    &-info {
-      width: 100%;
-      height: 50px;
-      border: 1px solid silver;
-      border-radius: 15px;
-      background: linear-gradient(324deg, #0b0b0b 32.1%, #55bdbd 158.74%);
+      &-front {
+        backface-visibility: hidden;
 
-      @media (min-width: 685px) {
-        display: none;
+        & img {
+          width: 100%;
+          height: 100vh;
+        }
+
+        &-info {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          position: absolute;
+          bottom: 0;
+
+          & span {
+            height: 50px;
+            background: linear-gradient(to left, #175151, #000);
+            border: 1px solid #505050;
+            border-radius: 20px;
+
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+
+            color: #fff;
+            letter-spacing: 1px;
+          }
+        }
       }
-    }
 
-    &-publication {
-      width: 100%;
-      height: 50px;
-      border: 1px solid silver;
-      border-radius: 15px 15px 0px 0px;
-      background: #e2ebeb;
-
-      @media (min-width: 685px) {
-        display: none;
+      &-back {
+        backface-visibility: hidden;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        transform: rotateY(180deg);
       }
     }
   }
