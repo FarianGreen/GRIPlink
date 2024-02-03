@@ -1,6 +1,7 @@
 import './home.scss';
 
 import homeImg from '../../assets/img/home-img/home-img.jpg';
+import mainBackground from '../../assets/img/main-background/background.jpg';
 
 export const Home = () => {
   return (
@@ -22,7 +23,13 @@ export const Home = () => {
               </span>
             </div>
           </div>
-          <div className="home__content-card-back"></div>
+          <div className="home__content-card-back">
+            <img
+              src={mainBackground}
+              alt=""
+              className="home__content-card-back-bg"
+            />
+          </div>
         </article>
         <button className="home__content-button"></button>
       </div>
