@@ -14,8 +14,10 @@ code {
 
 #root {
   display: flex;
-  // flex-direction: column;
+  flex-direction: row-reverse;
   height: 100vh;
+  background: linear-gradient(#175151, #000);
+  font-family: $main-font;
 
   @include mobile(960px) {
     // flex-direction: row;

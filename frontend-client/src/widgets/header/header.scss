@@ -1,7 +1,8 @@
-// @import '../../assets/styles/variables.scss';
+@import '../../assets/styles/style.scss';
 
 .header {
   background-color: #c7c1c1;
+  font-family: $main-font;
 
   &__nav {
     &-burger {
@@ -96,18 +97,18 @@
 
       @keyframes menu-open {
         from {
-          transform: translateX(100%);
+          transform: translateX(0%);
         }
         to {
-          transform: translateX(0%);
+          transform: translateX(-100%);
         }
       }
       @keyframes menu-close {
         from {
-          transform: translateX(0%);
+          transform: translateX(-100%);
         }
         to {
-          transform: translateX(100%);
+          transform: translateX(0%);
         }
       }
 
