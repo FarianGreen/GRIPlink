@@ -14,10 +14,10 @@ code {
 
 #root {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   height: 100vh;
 
   @include mobile(960px) {
-    flex-direction: row;
+    // flex-direction: row;
   }
 }
