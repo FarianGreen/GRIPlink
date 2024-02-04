@@ -10,17 +10,36 @@
       height: 100vh;
       transform-style: preserve-3d;
 
-        animation-name: active;
-        animation-duration: 3s;
-        // animation-iteration-count: infinite;
+      animation-name: close;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
 
-      @keyframes active {
+      @keyframes open {
         from {
           transform: rotateY(0deg);
         }
         to {
           transform: rotateY(180deg);
         }
+      }
+
+      @keyframes close {
+        from {
+          transform: rotateY(180deg);
+        }
+        to {
+          transform: rotateY(0deg);
+        }
+      }
+
+      &--active {
+        width: 375px;
+        height: 100vh;
+
+        animation-name: open;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        transform-style: preserve-3d;
       }
 
       &-front,
