@@ -8,10 +8,10 @@
     &-card {
       width: 375px;
       height: 100vh;
-      transform-style: preserve-3d;
 
       animation-name: close;
-      animation-duration: 3s;
+      animation-duration: 1s;
+      transform-style: preserve-3d;
       animation-fill-mode: forwards;
 
       @keyframes open {
@@ -37,9 +37,9 @@
         height: 100vh;
 
         animation-name: open;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
+        animation-duration: 1s;
         transform-style: preserve-3d;
+        animation-fill-mode: forwards;
       }
 
       &-front,
@@ -51,6 +51,8 @@
       }
 
       &-front {
+        width: 100%;
+        height: 100vh;
         backface-visibility: hidden;
 
         & img {
@@ -85,10 +87,13 @@
 
       &-back {
         backface-visibility: hidden;
-        background-color: #fff;
         width: 100%;
-        height: 100vh;
         transform: rotateY(180deg);
+
+        & img {
+          width: 100%;
+          height: 100vh;
+        }
       }
     }
   }
