@@ -19,7 +19,7 @@ code {
   background: linear-gradient(#175151, #000);
   font-family: $main-font;
 
-  @include mobile(960px) {
-    // flex-direction: row;
+  @include mobile(685px) {
+    // flex-direction: column;
   }
 }
