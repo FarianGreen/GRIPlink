@@ -1,19 +1,27 @@
+@import '../../assets/styles/style.scss';
+
 .navbar {
-  height: 80px;
+  height: 100vh;
   background-color: #215656;
 
   margin-top: auto;
   padding: 12px 11px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
-  @media (min-width: 685px) {
-    flex-direction: column;
+  // @include mobile(685px) {
+  //   flex-direction: row;
+  //   height: 80px;
+  // }
 
-    height: 100vh;
-  }
+  // @media (min-width: 685px) {
+  //   flex-direction: column;
+
+  //   height: 100vh;
+  // }
 
   &__item {
     width: 57px;
