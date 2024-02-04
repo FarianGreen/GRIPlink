@@ -36,7 +36,7 @@ export const Home = () => {
             <img
               src={mainBackground}
               alt=""
-              className="home__content-card-back-bg"
+              className="home__content-card-back-picture"
             />
           </div>
         </article>
