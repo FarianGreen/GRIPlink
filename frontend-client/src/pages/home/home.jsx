@@ -1,22 +1,22 @@
-import "./home.scss";
+import './home.scss';
 
-import homeImg from "../../assets/img/home-img/home-img.jpg";
-import mainBackground from "../../assets/img/main-background/background.jpg";
+import homeImg from '../../assets/img/home-img/home-img.jpg';
+import mainBackground from '../../assets/img/main-background/background.jpg';
 
-import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
-import { toggleCard } from "./reducer/cardSlice";
+import { useAppDispatch, useAppSelector } from '../../shared/hooks/hooks';
+import { toggleCard } from './reducer/cardSlice';
 
 export const Home = () => {
   const dispatch = useAppDispatch();
   const active = useAppSelector((state) => state.card.toggleCard);
-  const data = JSON.parse(localStorage.getItem("userToken"));
-  
+  const data = JSON.parse(localStorage.getItem('userToken'));
+
   return (
     <section className="home">
       <div className="home__content">
         <article
           className={
-            active ? "home__content-card--active" : "home__content-card"
+            active ? 'home__content-card--active' : 'home__content-card'
           }
           onClick={() => dispatch(toggleCard())}
         >
