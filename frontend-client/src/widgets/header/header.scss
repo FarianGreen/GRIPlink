@@ -2,8 +2,8 @@
 
 .header {
   background-color: #c7c1c1;
-  font-family: $main-font;
 
+  // font-weight: map-get($font-weights, 'bold-italic');
   &__nav {
     &-burger {
       width: 50px;
@@ -88,6 +88,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+
         background: rgba(13, 17, 17, 0.8);
 
         animation-name: menu-open;
@@ -118,7 +119,7 @@
         gap: 19px;
         display: flex;
         align-items: center;
-        color: #fff;
+        @include font(16px, 700, $white);
 
         & span {
           width: 30px;

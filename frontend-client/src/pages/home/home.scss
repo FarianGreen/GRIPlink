@@ -4,13 +4,12 @@
   width: 100%;
 
   &__content {
-    display: flex;
+    @include flex('row');
     justify-content: center;
 
     &-card {
       width: 375px;
       height: 100vh;
-      font-family: $main-font;
 
       animation-name: close;
       animation-duration: 1s;

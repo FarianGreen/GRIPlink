@@ -1,2 +1,36 @@
 $main-font: 'Montserrat', sans-serif;
-$fz: 24px;
+$font-weights: (
+  'regular': 400,
+  'medium-italic': 500,
+  'semiBold-italic': 600,
+  'bold-italic': 700,
+);
+
+$fz: 16px;
+
+$white: #fff;
+$beluga: #f1f1f1;
+$kala-black: #1f1a16;
+$black: #000;
+$raven: #0b0b0b;
+$ruined-smores: #0d1111;
+$sussie: #55bdbd;
+$north-wind: #49bdbd;
+$blue-hosta: #297373;
+$forbidden-forest: #215656;
+$deep-sanction: #175151;
+$snowflake: #f0f0f0;
+$plaster-cast: #e1ebeb;
+$autumn-fog: #b0b9b9;
+$westchester-grey: #787878;
+$falu-red: #830e1b;
+$beastly-red: #630b03;
+
+$color-change: (
+  'default': $black,
+  'primary': $blue-hosta,
+  'warning': $falu-red,
+  'error': $beastly-red,
+  'success': $north-wind,
+  'polite': $forbidden-forest,
+);

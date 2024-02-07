@@ -13,10 +13,11 @@ code {
 }
 
 #root {
+  font-family: $main-font;
   display: flex;
   flex-direction: row-reverse;
   height: 100vh;
-  background: linear-gradient(#175151, #000);
+  background: linear-gradient($deep-sanction, $black);
 
   @include mobile(685px) {
     // flex-direction: column;

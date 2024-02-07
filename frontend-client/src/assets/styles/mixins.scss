@@ -4,7 +4,18 @@
   }
 }
 
-@mixin title {
-  font-family: $main-font;
+@mixin font($fz: 14px, $font-weights: 400, $color: $white) {
   font-size: $fz;
+  font-weight: $font-weights;
+  color: $color;
+}
+
+@mixin flex($flex: 'row') {
+  @if $flex == 'row' {
+    display: flex;
+    flex-direction: row;
+  } @else if $flex == 'column' {
+    display: flex;
+    flex-direction: column;
+  }
 }
