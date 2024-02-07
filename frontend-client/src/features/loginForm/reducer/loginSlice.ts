@@ -6,6 +6,7 @@ interface loginInitialState {
   error: string;
   autorizadedUser: string | null;
   haveError: boolean;
+  data: Object | null;
 }
 
 export const sendLoginData = createAsyncThunk(
@@ -26,6 +27,7 @@ const initialState: loginInitialState = {
   error: "",
   autorizadedUser: localStorage.getItem("userToken"),
   haveError: false,
+  data: null,
 };
 
 const loginSlice = createSlice({
@@ -46,8 +48,8 @@ const loginSlice = createSlice({
     builder
       .addCase(sendLoginData.fulfilled, (state, action) => {
         state.error = "Вход выполнен успешно";
-        const { token } = action.payload;
-        localStorage.setItem("userToken", JSON.stringify({ token }));
+        state.data = action.payload;
+        localStorage.setItem("userToken", JSON.stringify(state.data));
         state.isLogined = true;
       })
       .addCase(sendLoginData.rejected, (state) => {
