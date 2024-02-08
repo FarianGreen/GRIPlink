@@ -26,54 +26,44 @@ export const Header = () => {
           onClick={() => dispatch(toggle())}
         >
           <Link className="header__nav-menu-item" to={Path.home}>
-            <span></span>
-            Профиль
+            <div className="header__nav-menu-item-profile"></div>
+            <span>Профиль</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.messages}>
-            <span></span>
-            Мессенджер
+            <span>Мессенджер</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.friends}>
-            <span></span>
-            Друзья
+            <span>Друзья</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.clubs}>
-            <span></span>
-            Сообщество
+            <span>Сообщество</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.schedule}>
-            <span></span>
-            Расписание
+            <span>Расписание</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.events}>
-            <span></span>
-            События
+            <span>События</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.photo}>
-            <span></span>
-            Фото
+            <span>Фото</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.video}>
-            <span></span>
-            Видео
+            <span>Видео</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.music}>
-            <span></span>
-            Музыка
+            <span>Музыка</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.files}>
-            <span></span>
-            Файлы
+            <span>Файлы</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.settings}>
-            <span></span>
-            Общие настройки
+            <span>Общие настройки</span>
           </Link>
           <div
             className="header__nav-menu-item"
             onClick={() => dispatch(logOut())}
           >
-            <span></span> Выйти из профиля
+            <span>Выйти из профиля</span>
           </div>
         </ul>
       </nav>
