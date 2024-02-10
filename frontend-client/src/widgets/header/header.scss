@@ -124,10 +124,11 @@
         align-items: center;
         @include font(16px, 700, $white);
 
-        &-profile {
-          background-image: url('../../assets/icons/header-icons/profile-icon.svg');
-          width: 18px;
-          height: 21px;
+        &-icon {
+          --icon-color: red;
+
+          width: 30px;
+          height: 30px;
         }
       }
     }

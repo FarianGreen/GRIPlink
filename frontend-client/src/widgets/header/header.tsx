@@ -4,6 +4,7 @@ import './header.scss';
 import { useAppDispatch, useAppSelector } from '../../shared/hooks/hooks';
 import { toggle } from './reducer/headerSlice';
 import { logOut } from '../../features/loginForm/reducer/loginSlice';
+import { ReactComponent as Logo } from '@icons/header-icons/linkedin-outlined.svg';
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -26,7 +27,8 @@ export const Header = () => {
           onClick={() => dispatch(toggle())}
         >
           <Link className="header__nav-menu-item" to={Path.home}>
-            <div className="header__nav-menu-item-profile"></div>
+            <Logo className="header__nav-menu-item-icon" />
+
             <span>Профиль</span>
           </Link>
           <Link className="header__nav-menu-item" to={Path.messages}>
