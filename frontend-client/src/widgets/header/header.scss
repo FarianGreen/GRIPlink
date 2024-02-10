@@ -1,9 +1,8 @@
-@import '../../assets/styles/style.scss';
+@use '../../assets/styles/style.scss' as *;
 
 .header {
   background-color: #c7c1c1;
 
-  // font-weight: map-get($font-weights, 'bold-italic');
   &__nav {
     &-burger {
       width: 50px;
@@ -122,11 +121,12 @@
         gap: 19px;
         display: flex;
         align-items: center;
-        @include font(16px, 700, $white);
+
+        & span {
+          @include font(16px, 700, $white);
+        }
 
         &-icon {
-          --icon-color: red;
-
           width: 30px;
           height: 30px;
         }

@@ -1,4 +1,4 @@
-@import '../../assets/styles/style.scss';
+@use '../../assets/styles/style.scss' as *;
 
 .navbar {
   height: 100vh;
