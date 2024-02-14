@@ -1,5 +1,5 @@
-@import './variables.scss';
-@import './mixins.scss';
-@import './fonts.scss';
-@import './nullstyles.scss';
-@import './shared.scss';
+@forward './variables.scss';
+@forward './mixins.scss';
+@forward './fonts.scss';
+@forward './nullstyles.scss';
+@forward './shared.scss';

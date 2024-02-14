@@ -1,9 +1,21 @@
-import { Path } from "../../app/config/path";
-import { Link } from "react-router-dom";
-import "./header.scss";
-import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
-import { toggle } from "./reducer/headerSlice";
-import { logOut } from "../../features/loginForm/reducer/loginSlice";
+import { Path } from '../../app/config/path';
+import { Link } from 'react-router-dom';
+import './header.scss';
+import { useAppDispatch, useAppSelector } from '../../shared/hooks/hooks';
+import { toggle } from './reducer/headerSlice';
+import { logOut } from '../../features/loginForm/reducer/loginSlice';
+import { ReactComponent as Profile } from '@icons/header-icons/profile-icon.svg';
+import { ReactComponent as Message } from '@icons/header-icons/message-icon.svg';
+import { ReactComponent as Friends } from '@icons/header-icons/friends-icon.svg';
+import { ReactComponent as Community } from '@icons/header-icons/community-icon.svg';
+import { ReactComponent as Calendar } from '@icons/header-icons/calendar-icon.svg';
+import { ReactComponent as Event } from '@icons/header-icons/event-icon.svg';
+import { ReactComponent as Photo } from '@icons/header-icons/photo-icon.svg';
+import { ReactComponent as Video } from '@icons/header-icons/video-icon.svg';
+import { ReactComponent as Music } from '@icons/header-icons/music-icon.svg';
+import { ReactComponent as Files } from '@icons/header-icons/files-icon.svg';
+import { ReactComponent as Settings } from '@icons/header-icons/settings-icon.svg';
+import { ReactComponent as Exit } from '@icons/header-icons/exit-icon.svg';
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -13,7 +25,7 @@ export const Header = () => {
       <nav className="header__nav">
         <div
           className={
-            active ? "header__nav-burger--active" : "header__nav-burger"
+            active ? 'header__nav-burger--active' : 'header__nav-burger'
           }
           onClick={() => dispatch(toggle())}
         >
@@ -22,58 +34,70 @@ export const Header = () => {
           <span></span>
         </div>
         <ul
-          className={active ? "header__nav-menu--active" : "header__nav-menu"}
+          className={active ? 'header__nav-menu--active' : 'header__nav-menu'}
           onClick={() => dispatch(toggle())}
         >
           <Link className="header__nav-menu-item" to={Path.home}>
-            <span></span>
-            Профиль
+            <Profile className="header__nav-menu-item-icon" />
+            <span>Профиль</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.messages}>
-            <span></span>
-            Мессенджер
+            <Message className="header__nav-menu-item-icon" />
+            <span>Мессенджер</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.friends}>
-            <span></span>
-            Друзья
+            <Friends className="header__nav-menu-item-icon" />
+            <span>Друзья</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.clubs}>
-            <span></span>
-            Сообщество
+            <Community className="header__nav-menu-item-icon" />
+            <span>Сообщество</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.schedule}>
-            <span></span>
-            Расписание
+            <Calendar className="header__nav-menu-item-icon" />
+            <span>Расписание</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.events}>
-            <span></span>
-            События
+            <Event className="header__nav-menu-item-icon" />
+            <span>События</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.photo}>
-            <span></span>
-            Фото
+            <Photo className="header__nav-menu-item-icon" />
+            <span>Фото</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.video}>
-            <span></span>
-            Видео
+            <Video className="header__nav-menu-item-icon" />
+            <span>Видео</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.music}>
-            <span></span>
-            Музыка
+            <Music className="header__nav-menu-item-icon" />
+            <span>Музыка</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.files}>
-            <span></span>
-            Файлы
+            <Files className="header__nav-menu-item-icon" />
+            <span>Файлы</span>
           </Link>
+
           <Link className="header__nav-menu-item" to={Path.settings}>
-            <span></span>
-            Общие настройки
+            <Settings className="header__nav-menu-item-icon" />
+            <span>Общие настройки</span>
           </Link>
+
           <div
             className="header__nav-menu-item"
             onClick={() => dispatch(logOut())}
           >
-            <span></span> Выйти из профиля
+            <Exit className="header__nav-menu-item-icon" />
+            <span>Выйти из профиля</span>
           </div>
         </ul>
       </nav>
